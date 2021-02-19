@@ -12,6 +12,10 @@ const numberDiv = document.getElementById('numberContainer');
 numberDiv.addEventListener('click', function (event) {
     const clickedNumber = event.target.innerText;
     if (isNaN(clickedNumber)) {
+        if(clickedNumber === '<'){
+            const typedPin = document.getElementById('typed-pin');
+            typedPin.value = typedPin.value.slice(0,-1) ;
+        }
         if (clickedNumber === 'C') {
             const typedPin = document.getElementById('typed-pin');
             typedPin.value = "";
